@@ -26,25 +26,3 @@ int main()
 
     return 0;
 }
-
-/*
-int withdrawal;
-double balance;
-
-cin >> withdrawal >> balance;
-
-if(withdrawal > balance)
-{
-printf("%.2f", balance);
-}
-else if(withdrawal%5 != 0)
-{
-printf("%.2f", balance);
-}
-else
-{
-printf("%.2f", balance - withdrawal - 0.50);
-}
-
-return 0;
- */
