@@ -30,3 +30,8 @@ int main() {
     cout << factorial;
     return 0;
 }
+
+
+// test cases
+// n = 1, m = 10, c = 1
+// 
