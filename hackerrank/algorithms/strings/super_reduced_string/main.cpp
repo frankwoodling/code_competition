@@ -1,125 +1,66 @@
 // HackerRank Practice Problems
 // Algorithms > Strings > Super Reduced String
-#include <stdio.h>
-#include <string.h>
 #include <iostream>
+
 using namespace std;
+bool reduce_fin = false;
 
-
-int reduce_str(string str)
-{
-
-}
-
-int main()
-{
-    string init_string;
-    cin >> init_string;
-
-
-
-}
-
-
-
-
-/*string reduce_str(string str)
-{
-
-}
-
-
-int main ()
-{
-    string init_string, reduced_string;
-    cin >> init_string;
-
-    reduced_string = reduce_str(init_string);
-
-    if(reduced_string  )
-    {
-        string str = "abcde";
-        cout << str.length() << endl;
-
-        for(int i = 0; i < 5; i++)
-        {
-            cout << str[i] << endl;
-
-        }
-    }
-
-    return 0;
-}*/
-
-// if empty end loop
-// else if not empty check for dups
-
-
-// if dups == 0 print str
-// else rerun function with new str
-
-
-
-
-
-/*    char szInput[256];
-    printf ("Enter a sentence: ");
-    gets (szInput);
-    printf ("The sentence entered is %u characters long.\n",(unsigned)strlen(szInput));*/
-
-
-/*int main()
-{
-    string str = "abcde";
-    cout << str.length() << endl;
-
-    for(int i = 0; i < 5; i++)
-    {
-        cout << str[i] << endl;
-
-    }
-    //cout << str[4] << endl << str[2];
-    str.erase(3,1);
-    cout << str.length() << endl;
-
-    for(int i = 0; i < 4; i++)
-    {
-        cout << str[i] << endl;
-
-    }
-
-}*/
-
-
-/*
 string reduce_str(string str)
 {
-    int str_length =  str.length();
-    int num_dups = 0;
-    string str_new = "f";
+    int ind_removed = 0;
 
-    for(int i = 0; i <= str_length; i++)
+    for(int i = 0; i < str.length(); i++)
     {
-        if(str.length() == 0)
+        if(str[i]==str[i+1])
         {
-            cout << "Empty String";
+            str.erase(i,2);
+            ind_removed = ind_removed + 2;
         }
-        else if(str[i]==str[i-1])
-        {
-            num_dups++;
-            str.erase(i,1);
-            reduce_str(str);
-        }
-        else if (num_dups == 0 && str.length() > 0)
-        {
-            cout << str;
-        }
-        else
-        {
-            reduce_str(str);
-        }
+    }
+
+    if(ind_removed == 0)
+    {
+        reduce_fin = true;
     }
 
     return str;
 }
+
+int main()
+{
+    string input_str;
+    cin >> input_str;
+
+    while(!reduce_fin)
+    {
+        input_str = reduce_str(input_str);
+    }
+
+    if(input_str.length()==0)
+    {
+        cout << "Empty String";
+    }
+    else
+    {
+        cout << input_str;
+    }
+}
+
+// much better solution
+/*
+string str; cin >> str;
+int i=0;
+
+while(i < static_cast< int > (str.size()-1)) {
+if(i>-1 && str[i] == str[i+1]) {
+str.erase(i,2);
+i--;
+} else
+i++;
+}
+
+if(str.empty())
+cout << "Empty String" << endl;
+else
+cout << str << endl;
 */
