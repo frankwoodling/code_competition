@@ -7,8 +7,8 @@
 using namespace std;
 
 int main() {
-    vector<long long int>v;
-    long long int t1, t2, n;
+    vector<unsigned long long int>v;
+    unsigned long long int t1, t2, n;
     cin >> t1 >> t2 >> n;
 
     v.push_back(t1);
@@ -23,14 +23,3 @@ int main() {
 
     return 0;
 }
-
-
-/*
-
-vector<int>v;
-
-for(int i = 0; i < n; i++)
-{
-cin >> x;
-v.push_back(x);
-}*/
