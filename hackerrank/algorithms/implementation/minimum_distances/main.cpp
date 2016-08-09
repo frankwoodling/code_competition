@@ -7,6 +7,7 @@ using namespace std;
 
 int main()
 {
+    int min = 10e6;
     int n;
     cin >> n;
     vector<int> arr(n);
@@ -19,9 +20,14 @@ int main()
     {
         for(int j = i + 1; j < n; j++)
         {
-            cout << arr[j];
+            if(arr[i]==arr[j] && (j-i) < min)
+            {
+                min = j-i;
+            }
         }
-        cout << endl;
     }
+
+    if(min < 10e6){cout << min;}
+    else{cout << -1;}
     return 0;
 }
