@@ -1,5 +1,5 @@
 // HackerRank Practice Problems
-// Algorithms > Strings > Super Reduced String
+// Algorithms > Strings > CamelCase
 
 #include <iostream>
 
