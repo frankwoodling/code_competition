@@ -3,6 +3,7 @@
 
 // Times out on tests 4 and 5
 // Sorting seem necessary to add to the correct index
+// be sure to use long long
 #include <iostream>
 #include <vector>
 #include <algorithm>
