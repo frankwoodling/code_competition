@@ -1,4 +1,4 @@
-// TopCoder Practice
+// TopCoder Live
 // SRM 696 DIV 2
 // 0 of 250 points
 

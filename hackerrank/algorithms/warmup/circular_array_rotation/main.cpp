@@ -63,27 +63,3 @@ int main(){
     return 0;
 }
 */
-
-
-/*
-int main() {
-    int n;
-    int k;
-    int q;
-    int m;
-    scanf("%d %d %d",&n,&k,&q); // 3 2 3
-    int arr[n];
-    int i;
-
-    for(i = 0; i < n; i++){
-        scanf("%d",&arr[(i+k)%n]); // 1 2 3
-    }
-
-    for(i = 0; i < q; i++){
-        scanf("%d",&m); // 0 1 2
-        printf("%d\n",arr[m]);
-    }
-
-    return 0;
-}
-*/
