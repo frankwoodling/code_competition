@@ -6,8 +6,8 @@ using namespace std;
 
 struct Student{
     int age;
-    string first_name[50];
-    string last_name[50];
+    char first_name[51];
+    char last_name[51];
     int standard;
 };
 
