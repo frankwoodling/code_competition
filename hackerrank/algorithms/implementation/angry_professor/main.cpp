@@ -3,26 +3,24 @@
 
 #include <iostream>
 
-using namespace std;
-
 int main(){
     long long int t, n, k, temp, count = 0;
-    cin >> t;
+    std::cin >> t;
 
     for(int j = 0; j < t; j++) {
-        cin >> n >> k;
+        std::cin >> n >> k;
         for (int i = 0; i < n; i++) {
-            cin >> temp;
+            std::cin >> temp;
 
             if (temp > 0){
                 count++;
             }
         }
-        if (count >= k) {
-            cout << "NO" << endl;
+        if (count <= n - k) {
+            std::cout << "NO" << std::endl;
         }
         else {
-            cout << "YES" << endl;
+            std::cout << "YES" << std::endl;
         }
         count = 0;
     }
