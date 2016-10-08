@@ -3,13 +3,12 @@
 // Incomplete
 
 #include <iostream>
-using namespace std;
 
 int main() {
-    string str;
-    cin >> str;
+    std::string str;
+    std::cin >> str;
     long long int n, ans = 0;
-    cin >> n;
+    std::cin >> n;
     long long int rem = n%str.size();
 
     for(int i = 0; i < str.size(); i++) {
@@ -28,7 +27,7 @@ int main() {
         }
     }
 
-    cout << ans;
+    std::cout << ans;
 
     return 0;
 }
